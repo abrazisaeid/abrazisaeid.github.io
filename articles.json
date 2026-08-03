@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Both Devices Support IEEE 1588—So Why Don’t They Synchronise?",
+    "date": "2026-07-11",
+    "category": "PTP & Power Profiles",
+    "summary": "A practical look at why IEEE 1588 support alone does not guarantee interoperability across power-utility timing profiles.",
+    "url": "https://www.linkedin.com/pulse/both-devices-support-ieee-1588so-why-dont-synchronise-safari-abrazi-udwye"
+  },
+  {
+    "title": "Why an IEC 61850 Device Can Pass Wireshark and Still Fail in Real Time",
+    "date": "2026-07-05",
+    "category": "IEC 61850",
+    "summary": "Why correct packet formatting is not the same as correct end-to-end timing across firmware, FPGA, buffers, and physical outputs.",
+    "url": "https://www.linkedin.com/pulse/why-iec-61850-device-can-pass-wireshark-still-fail-safari-abrazi-wx8fe"
+  },
+  {
+    "title": "Enhancing Hardware Security: Reading Zynq-7020’s Unique DNA ID via Custom IP Core",
+    "date": "2025-09-14",
+    "category": "FPGA & Security",
+    "summary": "Using a custom AXI4-Lite IP core to expose the Zynq-7020 device DNA for authentication, licensing, and anti-cloning applications.",
+    "url": "https://www.linkedin.com/pulse/enhancing-hardware-security-reading-zynq-7020s-unique-safari-abrazi-glt1f"
+  },
+  {
+    "title": "Engineering Industrial Time Synchronization on Xilinx Zynq",
+    "date": "2025-08-25",
+    "category": "Time Synchronization",
+    "summary": "An implementation-focused overview of PTP, IRIG-B, NTP/SNTP, GPS, and timing architecture on a Xilinx Zynq platform.",
+    "url": "https://www.linkedin.com/pulse/engineering-industrial-time-synchronization-xilinx-safari-abrazi-cdggc"
+  }
+]
