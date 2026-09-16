@@ -221,6 +221,9 @@
     .project-fact { padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg-2); }
     .project-fact small { display: block; color: var(--subtle); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; }
     .project-fact strong { display: block; margin-top: 4px; font-size: .82rem; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; }
+    .project-links a { color: var(--accent); text-decoration: none; font: 650 .73rem ui-monospace, SFMono-Regular, Menlo, monospace; border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+    .project-links a:hover, .project-links a:focus-visible { border-bottom-color: var(--accent); }
     .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 22px; }
     .tags span { padding: 5px 8px; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); font: 600 .68rem ui-monospace, SFMono-Regular, Menlo, monospace; }
 
@@ -528,6 +531,7 @@
             </div>
             <div class="project-body">
               <p class="project-kicker">Precision timing</p><h3>IEEE 1588 PTP for Power Utility Systems</h3><p>Designed and integrated PTP synchronization functions for a Zynq-based industrial device, including utility profiles, peer-delay processing, clock selection, correction handling, and coordination with GPS, IRIG-B, and internal timing.</p>
+              <div class="project-links"><a href="https://www.linkedin.com/pulse/both-devices-support-ieee-1588so-why-dont-synchronise-safari-abrazi-udwye" target="_blank" rel="noreferrer">Article: PTP profiles ↗</a><a href="https://www.linkedin.com/pulse/ptp-says-lockedbut-substation-really-synchronized-saeid-safari-abrazi-vxlse" target="_blank" rel="noreferrer">Article: validating PTP ↗</a></div>
               <div class="project-facts"><div class="project-fact"><small>Role</small><strong>Architecture &amp; implementation</strong></div><div class="project-fact"><small>Focus</small><strong>Deterministic synchronization</strong></div></div>
               <div class="tags"><span>IEEE 1588</span><span>C37.238</span><span>IEC 61850-9-3</span><span>C/C++</span><span>Zynq</span></div>
             </div>
@@ -550,13 +554,14 @@
             </div>
             <div class="project-body">
               <p class="project-kicker">Network redundancy</p><h3>HSR &amp; PRP Seamless Redundancy (IEC 62439-3)</h3><p>Extending the product line with zero-recovery-time Ethernet redundancy: duplicate generation and discard, ring forwarding, and the part that is genuinely hard — keeping redundancy handling consistent with precision timestamping, since every node in an HSR ring also has to behave as a transparent clock.</p>
+              <div class="project-links"><a href="https://www.linkedin.com/pulse/hsr-prp-power-automation-why-zero-recovery-redundancy-safari-abrazi-c1pfe" target="_blank" rel="noreferrer">Article: why zero-recovery ↗</a></div>
               <div class="project-facts"><div class="project-fact"><small>Status</small><strong>In development</strong></div><div class="project-fact"><small>Focus</small><strong>Redundancy &amp; timing interaction</strong></div></div>
               <div class="tags"><span>IEC 62439-3</span><span>HSR</span><span>PRP</span><span>IEEE 1588</span><span>Ethernet</span><span>FPGA</span></div>
             </div>
           </article>
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true"><div class="protocol-grid"><span>GOOSE</span><span>SV</span><span>VLAN</span><span>RX</span><span>FPGA</span><span>TX</span></div></div>
-            <div class="project-body"><p class="project-kicker">Substation automation</p><h3>IEC 61850 GOOSE &amp; Sampled Values</h3><p>Implemented publisher/subscriber features and connected protocol processing to real-time embedded and programmable-logic control paths.</p><div class="tags"><span>IEC 61850</span><span>GOOSE</span><span>SV</span><span>Ethernet</span></div></div>
+            <div class="project-body"><p class="project-kicker">Substation automation</p><h3>IEC 61850 GOOSE &amp; Sampled Values</h3><p>Implemented publisher/subscriber features and connected protocol processing to real-time embedded and programmable-logic control paths.</p><div class="project-links"><a href="https://www.linkedin.com/pulse/why-iec-61850-device-can-pass-wireshark-still-fail-safari-abrazi-wx8fe" target="_blank" rel="noreferrer">Article: Wireshark is not enough ↗</a><a href="https://www.linkedin.com/pulse/seven-ways-digital-substation-fails-while-every-saeid-safari-abrazi-ckn4e" target="_blank" rel="noreferrer">Article: seven silent failures ↗</a></div><div class="tags"><span>IEC 61850</span><span>GOOSE</span><span>SV</span><span>Ethernet</span></div></div>
           </article>
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true"><svg class="wave-diagram" viewBox="0 0 600 150"><path d="M0 75 C35 10 70 10 105 75 S175 140 210 75 280 10 315 75 385 140 420 75 490 10 525 75 570 140 600 92"/><path d="M0 92 C45 45 80 45 125 92 S205 139 250 92 330 45 375 92 455 139 500 92 560 45 600 75"/></svg></div>
@@ -564,7 +569,7 @@
           </article>
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true"><div class="stack-diagram"><span>Test &amp; application layer</span><span class="lead">Bare-metal C · ARM core</span><span class="lead">Verilog · programmable logic</span><span>Electronic hardware · boards</span></div></div>
-            <div class="project-body"><p class="project-kicker">Product platform</p><h3>Zynq Protection Relay Test Platform</h3><p>The instrument that proves somebody else&rsquo;s protection scheme works. I work across every layer of the same product rather than one of them, so a fault that could be in the logic, the firmware or the hardware gets followed instead of handed over.</p><div class="tags"><span>Zynq-7000</span><span>Verilog</span><span>Bare-metal C</span><span>Hardware</span><span>Real-time</span></div></div>
+            <div class="project-body"><p class="project-kicker">Product platform</p><h3>Zynq Protection Relay Test Platform</h3><p>The instrument that proves somebody else&rsquo;s protection scheme works. I work across every layer of the same product rather than one of them, so a fault that could be in the logic, the firmware or the hardware gets followed instead of handed over.</p><div class="project-links"><a href="https://www.linkedin.com/pulse/engineering-industrial-time-synchronization-xilinx-safari-abrazi-cdggc" target="_blank" rel="noreferrer">Article: timing on Zynq ↗</a></div><div class="tags"><span>Zynq-7000</span><span>Verilog</span><span>Bare-metal C</span><span>Hardware</span><span>Real-time</span></div></div>
           </article>
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true">
@@ -583,7 +588,7 @@
                 <text x="48" y="122">t4</text>
               </svg>
             </div>
-            <div class="project-body"><p class="project-kicker">Network timing</p><h3>SNTP/NTP Time Services on Zynq</h3><p>Client and server time services over UDP on a bare-metal Zynq target, with the timestamp taken from the same hardware source the PTP path uses so that network-level and protocol-level time agree rather than drift apart.</p><div class="tags"><span>SNTP</span><span>NTP</span><span>UDP</span><span>lwIP</span><span>Zynq</span><span>C</span></div></div>
+            <div class="project-body"><p class="project-kicker">Network timing</p><h3>SNTP/NTP Time Services on Zynq</h3><p>Client and server time services over UDP on a bare-metal Zynq target, with the timestamp taken from the same hardware source the PTP path uses so that network-level and protocol-level time agree rather than drift apart.</p><div class="project-links"><a href="https://github.com/abrazisaeid/UDP_SNTP_Zynq_7000" target="_blank" rel="noreferrer">Code: UDP_SNTP_Zynq_7000 ↗</a></div><div class="tags"><span>SNTP</span><span>NTP</span><span>UDP</span><span>lwIP</span><span>Zynq</span><span>C</span></div></div>
           </article>
         </div>
       </div>
