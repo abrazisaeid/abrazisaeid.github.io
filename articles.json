@@ -1,8 +1,22 @@
 [
   {
+    "title": "Seven Ways a Digital Substation Fails While Every Device Reports Healthy",
+    "date": "2026-09-12",
+    "category": "Substation validation",
+    "summary": "A layered validation model for IEC 61850, and the one measurement that settles each layer when every device still claims to be healthy.",
+    "url": "https://www.linkedin.com/pulse/seven-ways-digital-substation-fails-while-every-saeid-safari-abrazi-ckn4e"
+  },
+  {
+    "title": "PTP Says “Locked”—But Is the Substation Really Synchronized?",
+    "date": "2026-08-17",
+    "category": "PTP & validation",
+    "summary": "A practical validation and troubleshooting guide for IEEE 1588 in IEC 61850 systems, and why a locked status is not evidence of accuracy.",
+    "url": "https://www.linkedin.com/pulse/ptp-says-lockedbut-substation-really-synchronized-saeid-safari-abrazi-vxlse"
+  },
+  {
     "title": "Both Devices Support IEEE 1588—So Why Don’t They Synchronise?",
     "date": "2026-07-11",
-    "category": "PTP & Power Profiles",
+    "category": "PTP & power profiles",
     "summary": "Why IEEE 1588 support alone does not guarantee interoperability across power-utility timing profiles.",
     "url": "https://www.linkedin.com/pulse/both-devices-support-ieee-1588so-why-dont-synchronise-safari-abrazi-udwye"
   },
@@ -14,16 +28,23 @@
     "url": "https://www.linkedin.com/pulse/why-iec-61850-device-can-pass-wireshark-still-fail-safari-abrazi-wx8fe"
   },
   {
+    "title": "HSR and PRP in Power Automation: Why Zero-Recovery Redundancy Matters",
+    "date": "2026-06-29",
+    "category": "Network redundancy",
+    "summary": "What IEC 62439-3 seamless redundancy actually buys an IEC 61850 system, and why zero recovery time is a different requirement from fast recovery.",
+    "url": "https://www.linkedin.com/pulse/hsr-prp-power-automation-why-zero-recovery-redundancy-safari-abrazi-c1pfe"
+  },
+  {
     "title": "Enhancing Hardware Security: Reading Zynq-7020’s Unique DNA ID via Custom IP Core",
     "date": "2025-09-14",
-    "category": "FPGA & Security",
+    "category": "FPGA & security",
     "summary": "Using a custom AXI4-Lite IP core to expose the Zynq-7020 device DNA for authentication, licensing, and anti-cloning applications.",
     "url": "https://www.linkedin.com/pulse/enhancing-hardware-security-reading-zynq-7020s-unique-safari-abrazi-glt1f"
   },
   {
     "title": "Engineering Industrial Time Synchronization on Xilinx Zynq",
     "date": "2025-08-25",
-    "category": "Time Synchronization",
+    "category": "Time synchronization",
     "summary": "An implementation-focused overview of PTP, IRIG-B, NTP/SNTP, GPS, and timing architecture on a Xilinx Zynq platform.",
     "url": "https://www.linkedin.com/pulse/engineering-industrial-time-synchronization-xilinx-safari-abrazi-cdggc"
   }

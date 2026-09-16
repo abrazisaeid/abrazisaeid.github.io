@@ -28,7 +28,7 @@
       "https://www.linkedin.com/in/abrazisaeid/",
       "https://github.com/abrazisaeid"
     ],
-    "knowsAbout":["Embedded Systems","FPGA","Xilinx Zynq","IEC 61850","IEEE 1588 PTP","Verilog","C/C++","Industrial Ethernet"]
+    "knowsAbout":["Embedded Systems","FPGA","Xilinx Zynq","IEC 61850","IEEE 1588 PTP","IEC 62439-3 HSR/PRP","Verilog","C/C++","Industrial Ethernet"]
   }
   </script>
   <style>
@@ -237,6 +237,18 @@
     .wave-diagram path { fill: none; stroke: var(--accent); stroke-width: 2.1; }
     .wave-diagram path:nth-child(2) { stroke: var(--muted); opacity: .45; }
     .protocol-grid { width: 78%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .flow-diagram { width: 88%; max-width: 380px; height: 165px; }
+    .flow-diagram rect.box { fill: var(--surface); stroke: var(--line-strong); stroke-width: 1.3; }
+    .flow-diagram path.lane-a { fill: none; stroke: var(--accent); stroke-width: 2.1; }
+    .flow-diagram path.lane-b { fill: none; stroke: var(--muted); stroke-width: 2.1; opacity: .5; }
+    .flow-diagram path.head-a { fill: var(--accent); stroke: none; }
+    .flow-diagram path.head-b { fill: var(--muted); stroke: none; opacity: .5; }
+    .flow-diagram line.axis { stroke: var(--line-strong); stroke-width: 1.3; }
+    .flow-diagram text { fill: var(--muted); font: 650 .62rem ui-monospace, SFMono-Regular, Menlo, monospace; text-anchor: middle; }
+    .flow-diagram text.accent { fill: var(--accent); }
+    .stack-diagram { width: 80%; max-width: 250px; display: grid; gap: 9px; }
+    .stack-diagram span { height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--muted); font: 650 .64rem ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .stack-diagram span.lead { border-color: var(--accent); color: var(--accent); }
     .protocol-grid span { height: 52px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 9px; color: var(--muted); background: var(--surface); font: 650 .65rem ui-monospace, monospace; }
 
     /* Open source */
@@ -459,8 +471,8 @@
           </article>
           <article class="capability-card reveal">
             <div class="capability-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M3.5 8.5a10 10 0 0 1 17 0M6.5 11a6.5 6.5 0 0 1 11 0M12 15v7"/></svg></div>
-            <h3>Networking &amp; Timing</h3><p>Industrial Ethernet, IEC 61850, PTP, GPS/PPS, IRIG-B, SNTP, PHY integration, VLAN handling, and packet-level diagnostics.</p>
-            <div class="technology-line"><span>GOOSE</span><span>SV</span><span>PTP</span><span>Ethernet</span></div>
+            <h3>Networking &amp; Timing</h3><p>Industrial Ethernet, IEC 61850, PTP, HSR/PRP redundancy, GPS/PPS, IRIG-B, SNTP, PHY integration, VLAN handling, and packet-level diagnostics.</p>
+            <div class="technology-line"><span>GOOSE</span><span>SV</span><span>PTP</span><span>HSR/PRP</span><span>Ethernet</span></div>
           </article>
           <article class="capability-card reveal">
             <div class="capability-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20h16M6 17V9l6-5 6 5v8M9 17v-5h6v5"/></svg></div>
@@ -520,6 +532,28 @@
               <div class="tags"><span>IEEE 1588</span><span>C37.238</span><span>IEC 61850-9-3</span><span>C/C++</span><span>Zynq</span></div>
             </div>
           </article>
+          <article class="project-card featured reveal">
+            <div class="project-visual" aria-hidden="true">
+              <svg class="flow-diagram" viewBox="0 0 360 165">
+                <rect class="box" x="8" y="58" width="78" height="48" rx="10"/>
+                <rect class="box" x="274" y="58" width="78" height="48" rx="10"/>
+                <path class="lane-a" d="M86 72 C150 32 214 32 268 66"/>
+                <path class="head-a" d="M268 66 l-11 -1.5 l4 9 z"/>
+                <path class="lane-b" d="M86 92 C150 132 214 132 268 98"/>
+                <path class="head-b" d="M268 98 l-11 1.5 l4 -9 z"/>
+                <text x="47" y="87">Source</text>
+                <text x="313" y="82">Sink</text>
+                <text x="313" y="98" class="accent">keep 1</text>
+                <text x="176" y="34" class="accent">LAN A · frame</text>
+                <text x="176" y="146">LAN B · duplicate</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Network redundancy</p><h3>HSR &amp; PRP Seamless Redundancy (IEC 62439-3)</h3><p>Extending the product line with zero-recovery-time Ethernet redundancy: duplicate generation and discard, ring forwarding, and the part that is genuinely hard — keeping redundancy handling consistent with precision timestamping, since every node in an HSR ring also has to behave as a transparent clock.</p>
+              <div class="project-facts"><div class="project-fact"><small>Status</small><strong>In development</strong></div><div class="project-fact"><small>Focus</small><strong>Redundancy &amp; timing interaction</strong></div></div>
+              <div class="tags"><span>IEC 62439-3</span><span>HSR</span><span>PRP</span><span>IEEE 1588</span><span>Ethernet</span><span>FPGA</span></div>
+            </div>
+          </article>
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true"><div class="protocol-grid"><span>GOOSE</span><span>SV</span><span>VLAN</span><span>RX</span><span>FPGA</span><span>TX</span></div></div>
             <div class="project-body"><p class="project-kicker">Substation automation</p><h3>IEC 61850 GOOSE &amp; Sampled Values</h3><p>Implemented publisher/subscriber features and connected protocol processing to real-time embedded and programmable-logic control paths.</p><div class="tags"><span>IEC 61850</span><span>GOOSE</span><span>SV</span><span>Ethernet</span></div></div>
@@ -527,6 +561,29 @@
           <article class="project-card reveal">
             <div class="project-visual" aria-hidden="true"><svg class="wave-diagram" viewBox="0 0 600 150"><path d="M0 75 C35 10 70 10 105 75 S175 140 210 75 280 10 315 75 385 140 420 75 490 10 525 75 570 140 600 92"/><path d="M0 92 C45 45 80 45 125 92 S205 139 250 92 330 45 375 92 455 139 500 92 560 45 600 75"/></svg></div>
             <div class="project-body"><p class="project-kicker">FPGA signal generation</p><h3>Deterministic Multi-Channel Waveform Engine</h3><p>Built FPGA and firmware data paths for synchronized waveform generation, interpolation, memory transfer, and tightly timed output control.</p><div class="tags"><span>Verilog</span><span>AXI</span><span>BRAM</span><span>DDR</span><span>Real-time</span></div></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true"><div class="stack-diagram"><span>Test &amp; application layer</span><span class="lead">Bare-metal C · ARM core</span><span class="lead">Verilog · programmable logic</span><span>Electronic hardware · boards</span></div></div>
+            <div class="project-body"><p class="project-kicker">Product platform</p><h3>Zynq Protection Relay Test Platform</h3><p>The instrument that proves somebody else&rsquo;s protection scheme works. I work across every layer of the same product rather than one of them, so a fault that could be in the logic, the firmware or the hardware gets followed instead of handed over.</p><div class="tags"><span>Zynq-7000</span><span>Verilog</span><span>Bare-metal C</span><span>Hardware</span><span>Real-time</span></div></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual" aria-hidden="true">
+              <svg class="flow-diagram" viewBox="0 0 320 165">
+                <line class="axis" x1="66" y1="34" x2="66" y2="142"/>
+                <line class="axis" x1="254" y1="34" x2="254" y2="142"/>
+                <path class="lane-a" d="M66 52 L248 70"/>
+                <path class="head-a" d="M248 70 l-10 -4.5 l-0.6 9.6 z"/>
+                <path class="lane-b" d="M254 100 L72 118"/>
+                <path class="head-b" d="M72 118 l10 4.5 l0.6 -9.6 z"/>
+                <text x="66" y="24">Client</text>
+                <text x="254" y="24">Server</text>
+                <text x="48" y="50" class="accent">t1</text>
+                <text x="272" y="70" class="accent">t2</text>
+                <text x="272" y="100">t3</text>
+                <text x="48" y="122">t4</text>
+              </svg>
+            </div>
+            <div class="project-body"><p class="project-kicker">Network timing</p><h3>SNTP/NTP Time Services on Zynq</h3><p>Client and server time services over UDP on a bare-metal Zynq target, with the timestamp taken from the same hardware source the PTP path uses so that network-level and protocol-level time agree rather than drift apart.</p><div class="tags"><span>SNTP</span><span>NTP</span><span>UDP</span><span>lwIP</span><span>Zynq</span><span>C</span></div></div>
           </article>
         </div>
       </div>
